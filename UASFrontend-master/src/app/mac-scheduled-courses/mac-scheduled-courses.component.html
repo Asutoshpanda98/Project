@@ -1,0 +1,22 @@
+    <br><br><br>
+      <h3 align="center">Applied courses</h3><br>
+      <br>
+      <b>Search:</b> &nbsp;&nbsp;<input type="text" name="search" placeholder="Search by applicant Status" style="border-radius: 10px;">
+      <br>
+
+      <table class="table table-hover">
+          <thead class="thead-dark">
+              <tr>
+              <th>Applicant Id</th>
+              <th>Applicant's name</th>
+              <th>Applied Course</th>
+              <th>Status</th>
+          </tr>
+          </thead>
+           <tr *ngFor="let m of model | filterByApplicantId: status">
+              <td>{{m.id}}</td>
+              <td>{{m.name}}</td>
+              <td>{{m.courseName}}</td>
+              <td>{{m.status}}</td>
+           </tr>
+ </table>

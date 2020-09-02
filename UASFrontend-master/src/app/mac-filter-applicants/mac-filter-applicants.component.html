@@ -1,0 +1,31 @@
+<br><br>
+    <h3 align="center">Applied courses</h3><br>
+    <b>Search:</b> &nbsp;&nbsp;<input type="text" name="search" placeholder="Search by course ID" style="border-radius: 10px;">
+    <br>
+    <br>
+    <table class="table table-hover">
+        <thead class="thead-dark">
+            <tr>
+            <th>Course Id</th>
+            <th>Applicant Id</th>
+            <th>Applicant's name</th>
+            <th>Applied Course</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tr *ngFor="let m of model |filterByCourseId:name">
+            <td>{{m.courseId}}</td>
+            <td>{{m.id}}</td>
+            <td>{{m.name}}</td>
+            <td>{{m.courseName}}</td>
+            <td>
+                <button type="submit" class="btn btn-success btn-sm" (click)="setInterview($event,m)">Accept</button>&nbsp;
+                <button type="submit" class="btn btn-danger btn-sm" (click)="deleteApplicant($event,m.id)">Reject</button>&nbsp;
+                <button type="submit" class="btn btn-primary btn-sm">Confirm</button>
+            </td>
+
+        </tr>
+
+      </table>
+
+

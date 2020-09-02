@@ -1,0 +1,12 @@
+package com.cg.scheduleprogramservice.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.cg.scheduleprogramservice.repository.ScheduleRepository;
+
+public class ScheduleServiceImpl implements {
+	
+	@Autowired
+	private ScheduleRepository scheduleRepository;
+
+}
